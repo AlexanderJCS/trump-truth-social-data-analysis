@@ -1,0 +1,29 @@
+[project]
+name = "trump-truth-social-analysis"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "adjusttext>=1.4.0",
+    "ipykernel>=7.3.0",
+    "matplotlib>=3.11.0",
+    "nltk>=3.10.0",
+    "pandas>=3.0.3",
+    "requests>=2.34.2",
+    "torch==2.11.0",
+    "torchvision==0.26.0",
+    "torchaudio==2.11.0",
+    "transformers>=5.13.0",
+    "pyarrow>=24.0.0",
+    "wordcloud>=1.9.6",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+torchvision = { index = "pytorch-cu128" }
+torchaudio = { index = "pytorch-cu128" }
